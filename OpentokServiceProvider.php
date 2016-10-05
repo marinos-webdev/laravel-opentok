@@ -15,16 +15,16 @@ class OpentokServiceProvider extends ServiceProvider
    *
    * @return void
    */
-public function boot() {
-	$this->publishes([
-		__DIR__.'/config/opentok.php' => config_path('opentok.php'),
-	]);
-
-	$this->app['OpentokApi'] = $this->app->share(function($app) {
-		return new OpenTok(
-			$app['config']->get('opentok')['api_key'],
-			$app['config']->get('opentok')['api_secret']
-		);
-	});
+	public function boot() {
+		$this->publishes([
+			__DIR__.'/config/opentok.php' => config_path('opentok.php'),
+		]);
 	
+		$this->app['OpentokApi'] = $this->app->share(function($app) {
+			return new OpenTok(
+				$app['config']->get('opentok')['api_key'],
+				$app['config']->get('opentok')['api_secret']
+			);
+		});
+	}
 }
