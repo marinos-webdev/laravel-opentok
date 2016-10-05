@@ -1,0 +1,18 @@
+{
+    "name": "m4rinos/laravel-opentok",
+    "description": "A laravel package for OpenTok",
+    "keywords": ["laravel", "opentok"],
+    "homepage": "https://github.com/marinos-webdev/laravel-opentok",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "m4rinos",
+            "email": "info@marinos.nl"
+        }
+    ],
+    "require": {
+        "opentok/opentok": "2.2.x"
+    },
+    "minimum-stability": "dev"
+}
