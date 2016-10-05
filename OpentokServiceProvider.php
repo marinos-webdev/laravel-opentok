@@ -27,4 +27,9 @@ class OpentokServiceProvider extends ServiceProvider
 			);
 		});
 	}
+
+	public function register() {
+	    App::register('m4rinos\laravel-opentok\OpentokServiceProvider');
+	}
+	
 }
